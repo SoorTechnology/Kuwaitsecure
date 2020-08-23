@@ -145,7 +145,7 @@ and Percentage wise as well as for the Invoice.
     'author': 'Soor  Technology',
     'website': '',
     'images': [],
-    'depends': ['base','sale','sale_management','account','stock'],
+    'depends': ['base','sale','sale_management','account','stock', 'web'],
     'data': [
         'views/sale_view.xml',
         'views/sale_views.xml',
