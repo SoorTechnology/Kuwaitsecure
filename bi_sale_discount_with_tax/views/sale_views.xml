@@ -1,6 +1,12 @@
 <odoo>
     <data>
 
+        <template id="assets_common_inherited" inherit_id="web.report_assets_common">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" type="text/scss" href="/bi_sale_discount_with_tax/static/src/scss/layout_clean_view.scss"/>
+            </xpath>
+        </template>
+
         <!-- sale.order Tree -->
 
         <record id="view_order_tree_inherited" model="ir.ui.view">
@@ -74,7 +80,7 @@
                 <table class="table table-sm o_main_table" name="invoice_line_table">
                     <thead>
                         <tr>
-                            <th class="text-center"><span>S.No</span></th>
+                            <th class="text-center" width="5%"><span>S.No</span></th>
                             <!-- TODO: remove in master -->
                             <t t-set="colspan" t-value="6"/>
                             <th name="th_description" class="text-left"><span>Description</span></th>
@@ -208,7 +214,7 @@
                 <table class="table table-sm o_main_table">
                 <thead>
                     <tr>
-                        <th class="text-center">S.No</th>
+                        <th class="text-center" width="5%" >S.No</th>
                         <th name="th_description" class="text-left">Description</th>
                         <th name="th_quantity" class="text-right">Quantity</th>
                         <th name="th_priceunit" class="text-right">Unit Price</th>
